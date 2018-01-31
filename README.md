@@ -19,7 +19,7 @@ This plugin demonstrates a simple way to implement delayed and dismissible admin
 1. Add the `typewheel-notice/` folder to your root directory.
 1. Include the code from `plugin.php` in your root file.
 1. Search & replace all instances of `your_prefix_` in the root file. *(prefix should be unique to project)*
-1. In the `register_deactivation_hook`, replace `typewheel-notice.php` with the name of your root file.
+1. In the `register_deactivation_hook`, replace `typewheel-notice-demo.php` with the name of your root file.
 1. Customize your notices.
 
 ## How to Customize a Notice

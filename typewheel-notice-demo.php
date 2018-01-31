@@ -13,7 +13,7 @@
 // Step 1: Add the `typewheel-notice/` folder in root directory
 // Step 2: Include the following code in your root file
 // Step 3: Search & replace all instances of `your_prefix_` in your root file. (prefix should be unique to the project)
-// Step 4: In the `register_deactivation_hook`, replace `typewheel-notice.php` with the name of your root file.
+// Step 4: In the `register_deactivation_hook`, replace `typewheel-notice-demo.php` with the name of your root file.
 // Step 5: Customize your notices
 
 /* All of the following arguments can be customized in a notice array
@@ -61,14 +61,14 @@ if ( ! function_exists( 'your_prefix_typewheel_notices' ) && apply_filters( 'sho
 				'dismiss' => array( 'month' ),
 				'type' => '',
 				'icon' => 'paperclip',
-				'content' => 'This notice (scheduled for five seconds before plugin activation) is visible only on the dashboard. Another will be visible on the <a href="tools.php">Tools</a> and <a href="users.php">Users</a> page two minutes after plugin activation.',
+				'content' => 'This notice (scheduled for five seconds before plugin activation) is visible only on the dashboard. Another will be visible on the <a href="tools.php">Tools</a> and <a href="users.php">Users</a> page one minute after plugin activation.',
 				'style' => array( 'border-left-color' => '#3F3F3F', 'background-image' => 'linear-gradient( to bottom right, rgb(215, 215, 215), rgb(231, 211, 186) )' ),
 				'location' => array( 'index.php' ),
 				'capability' => 'update_plugins',
 			),
 			$prefix . '-give' => array(
 				'trigger' => true,
-				'time' => time() + 120,
+				'time' => time() + 60,
 				'dismiss' => array( 'week' ),
 				'type' => '',
 				'icon' => '',
@@ -99,6 +99,6 @@ if ( ! function_exists( 'your_prefix_remove_activation_marker' ) ) {
 		delete_option( $prefix . '_activated' );
 
 	}
-	register_deactivation_hook( dirname(__FILE__) . '/typewheel-notice.php', 'your_prefix_remove_activation_marker' );
+	register_deactivation_hook( dirname(__FILE__) . '/typewheel-notice-demo.php', 'your_prefix_remove_activation_marker' );
 
 }
