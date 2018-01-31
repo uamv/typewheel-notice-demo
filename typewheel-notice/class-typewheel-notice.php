@@ -72,7 +72,7 @@ if ( ! class_exists( 'Typewheel_Notice' ) ) {
 		public function __construct( $prefix, $notices = array(), $activation = array() ) {
 
 			$this->prefix = $prefix;
-			$this->activation = $activation;
+			if ( ! empty( $activation ) ) { $this->activation = $activation; }
 			$this->user = array();
 
 			// Display activation notice when plugin is activated or display notices to specific user from DB

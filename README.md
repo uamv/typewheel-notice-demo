@@ -11,6 +11,7 @@ This plugin demonstrates a simple way to implement delayed and dismissible admin
 1. allows the notice to display on any number of admin pages (including those added by other plugins having only a `?page=` parameter in the URL).
 1. allows defining a capability per notice which controls the users to whom a notice is shown.
 1. implements dismissals on a per user basis.
+1. includes a `show_typewheel_notices` filter that can completely disable notices on a site.
 1. allows full styling of the notice.
 1. allows for both a plugin activation notice and delayed notices.
 
